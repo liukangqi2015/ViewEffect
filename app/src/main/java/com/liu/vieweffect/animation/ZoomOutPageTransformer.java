@@ -4,14 +4,15 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 /**
- * Created by leo on 16/5/7.
+ * ViewPager画廊动画
+ * Created by liu on 16/5/7.
  */
 public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
 
-    private static final float MIN_SCALE = 0.9f;
+    private static final float MIN_SCALE = 0.8f;
     private static final float MIN_ALPHA = 0.5f;
 
-    private static float defaultScale = 0.9f;
+    private static float defaultScale = 0.8f;
 
     public void transformPage(View view, float position) {
         int pageWidth = view.getWidth();

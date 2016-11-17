@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.liu.vieweffect.R;
+
 import java.util.List;
 
 /**
@@ -21,7 +23,8 @@ public class PostersPagerAdapter extends AbsListPagerAdapter<Integer>{
 
     @Override
     public View newView(ViewGroup container,int position) {
-        ImageView poster_iv= new ImageView(mContext);
+        View view=inflater.inflate(R.layout.posters_view_layout,container,false);
+        ImageView poster_iv= (ImageView) view.findViewById(R.id.poster_iv);
         poster_iv.setImageResource(mData.get(position));
         return poster_iv;
     }
