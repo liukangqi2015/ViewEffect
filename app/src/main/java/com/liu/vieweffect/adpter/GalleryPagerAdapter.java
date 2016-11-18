@@ -16,6 +16,7 @@ import java.util.List;
  * Created by liu on 2016/11/17.
  */
 public class GalleryPagerAdapter extends PagerAdapter {
+    private OnPagerClickListener onPagerClickListener;
     private List<Integer> mDatas;
     private Context mContext;
     private int layoutId;
@@ -39,10 +40,18 @@ public class GalleryPagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, final int position) {
         View view=inflater.inflate(layoutId,null);
         ImageView poster_iv= (ImageView) view.findViewById(R.id.poster_iv);
         poster_iv.setImageResource(mDatas.get(position));
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onPagerClickListener!=null){
+                    onPagerClickListener.onPagerClick(v,position);
+                }
+            }
+        });
         container.addView(view);
         return view;
     }
@@ -51,5 +60,14 @@ public class GalleryPagerAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         View view=(View) object;
         container.removeView(view);
+    }
+
+    public void setOnPagerClickListener(OnPagerClickListener onPagerClickListener){
+        this.onPagerClickListener=onPagerClickListener;
+    }
+
+
+    public interface OnPagerClickListener{
+        void onPagerClick(View view,int position);
     }
 }
