@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
-    <FrameLayout
-        android:id="@+id/container_fl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/poster_vp"
+        android:layout_width="220dp"
+        android:layout_height="320dp" />
 
 </LinearLayout>
