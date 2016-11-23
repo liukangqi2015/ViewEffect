@@ -25,6 +25,7 @@ public class DetailActivity extends AppCompatActivity{
 
 
     private ImageView poster_detail_iv;
+    //上一个页面传来的参数
     private int imgId,left,top,width,height;
     private int deltaX;
     private int deltaY;
