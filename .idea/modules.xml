@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ViewEffect.iml" filepath="$PROJECT_DIR$/ViewEffect.iml" />
       <module fileurl="file://$PROJECT_DIR$/GalleryViewPager/app.iml" filepath="$PROJECT_DIR$/GalleryViewPager/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library_PullToRefresh_ForZc/library_PullToRefresh_ForZc.iml" filepath="$PROJECT_DIR$/library_PullToRefresh_ForZc/library_PullToRefresh_ForZc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pulltorefreshdemo/pulltorefreshdemo.iml" filepath="$PROJECT_DIR$/pulltorefreshdemo/pulltorefreshdemo.iml" />
     </modules>
   </component>
 </project>

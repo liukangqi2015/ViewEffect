@@ -1,1 +1,1 @@
-include ':GalleryViewPager', ':library_PullToRefresh_ForZc'
+include ':GalleryViewPager', ':library_PullToRefresh_ForZc', ':pulltorefreshdemo'
