@@ -12,4 +12,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportFragmentManager().beginTransaction().add(R.id.container_fl,new GalleryViewPagerFragment()).commit();
     }
+
+
 }

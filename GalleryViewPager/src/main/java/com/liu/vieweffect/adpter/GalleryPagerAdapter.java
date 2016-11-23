@@ -2,6 +2,7 @@ package com.liu.vieweffect.adpter;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,7 @@ public class GalleryPagerAdapter extends PagerAdapter {
         View view=inflater.inflate(layoutId,null);
         ImageView poster_iv= (ImageView) view.findViewById(R.id.poster_iv);
         poster_iv.setImageResource(mDatas.get(position));
+        ViewCompat.setTransitionName(poster_iv,"image"+position);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

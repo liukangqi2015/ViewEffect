@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GalleryViewPager/app.iml" filepath="$PROJECT_DIR$/GalleryViewPager/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GalleryViewPager/GalleryViewPager.iml" filepath="$PROJECT_DIR$/GalleryViewPager/GalleryViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewEffect.iml" filepath="$PROJECT_DIR$/ViewEffect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GalleryViewPager/app.iml" filepath="$PROJECT_DIR$/GalleryViewPager/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library_PullToRefresh_ForZc/library_PullToRefresh_ForZc.iml" filepath="$PROJECT_DIR$/library_PullToRefresh_ForZc/library_PullToRefresh_ForZc.iml" />
     </modules>
   </component>
 </project>
