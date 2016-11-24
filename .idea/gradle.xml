@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/GalleryViewPager" />
             <option value="$PROJECT_DIR$/library_PullToRefresh_ForZc" />
             <option value="$PROJECT_DIR$/pulltorefreshdemo" />
+            <option value="$PROJECT_DIR$/videologin" />
           </set>
         </option>
         <option name="myModules">
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/GalleryViewPager" />
             <option value="$PROJECT_DIR$/library_PullToRefresh_ForZc" />
             <option value="$PROJECT_DIR$/pulltorefreshdemo" />
+            <option value="$PROJECT_DIR$/videologin" />
           </set>
         </option>
       </GradleProjectSettings>

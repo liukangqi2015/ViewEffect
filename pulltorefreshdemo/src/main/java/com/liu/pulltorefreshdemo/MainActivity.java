@@ -13,8 +13,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity implements PullToRefreshBase.OnRefreshListener2<ListView> {
-    private static final int PULLDOWN = 0;
-    private static final int PULLUP = 1;
+    private static final int PULL_DOWN = 0;
+    private static final int PULL_UP = 1;
     private PullToRefreshListView mPullToRefreshListView;
     private ListAdapter mAdapter;
     private LinkedList<String> mData = new LinkedList<>();
@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity implements PullToRefreshBase
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
-                case PULLDOWN:
+                case PULL_DOWN:
                     Toast.makeText(MainActivity.this,"下拉刷新",Toast.LENGTH_SHORT).show();
                     break;
-                case PULLUP:
+                case PULL_UP:
                     Toast.makeText(MainActivity.this,"上拉加载",Toast.LENGTH_SHORT).show();
                     break;
                 default:
@@ -86,12 +86,12 @@ public class MainActivity extends AppCompatActivity implements PullToRefreshBase
     @Override
     public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
         onPullDown();
-        mHandler.sendEmptyMessageDelayed(PULLDOWN, 2000);
+        mHandler.sendEmptyMessageDelayed(PULL_DOWN, 2000);
     }
 
     @Override
     public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
         onPullUp();
-        mHandler.sendEmptyMessageDelayed(PULLUP, 2000);
+        mHandler.sendEmptyMessageDelayed(PULL_UP, 2000);
     }
 }
