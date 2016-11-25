@@ -13,6 +13,7 @@
         </activity>
         <activity android:name=".PullToRefreshActivity"/>
         <activity android:name=".UltraPullToRefreshActivity"/>
+        <activity android:name=".MixtureActivity"/>
     </application>
 
 </manifest>

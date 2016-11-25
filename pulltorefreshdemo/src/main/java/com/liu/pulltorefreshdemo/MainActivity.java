@@ -12,7 +12,7 @@ import android.widget.Button;
  * Created by liu on 2016/11/24.
  */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button pull_to_refresh_btn,ultra_pull_to_refresh_btn;
+    private Button pull_to_refresh_btn,ultra_pull_to_refresh_btn,mixture_btn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +24,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         pull_to_refresh_btn= (Button) findViewById(R.id.pull_to_refresh_btn);
         ultra_pull_to_refresh_btn= (Button) findViewById(R.id.ultra_pull_to_refresh_btn);
+        mixture_btn= (Button) findViewById(R.id.mixture_btn);
     }
 
     private void setListener() {
         pull_to_refresh_btn.setOnClickListener(this);
         ultra_pull_to_refresh_btn.setOnClickListener(this);
+        mixture_btn.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.ultra_pull_to_refresh_btn:
                 startActivity(new Intent(MainActivity.this,UltraPullToRefreshActivity.class));
+                break;
+            case R.id.mixture_btn:
+                startActivity(new Intent(MainActivity.this,MixtureActivity.class));
                 break;
             default:
                 break;

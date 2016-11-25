@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ListView;
 
 import java.util.LinkedList;
 
@@ -21,8 +20,9 @@ import in.srain.cube.views.ptr.header.StoreHouseHeader;
  */
 public class UltraPullToRefreshActivity extends AppCompatActivity{
     private PtrClassicFrameLayout ultra_ptr_frame;
+//    private LoadMoreListViewContainer loadMoreListViewContainer;
 
-    private ListView loadMoreListView;
+    private LoadMoreListView loadMoreListView;
     private ListAdapter mAdapter;
     private LinkedList<String> mData = new LinkedList<>();
     private static final String HEAD_STRING="MUKR";
@@ -36,8 +36,9 @@ public class UltraPullToRefreshActivity extends AppCompatActivity{
     }
 
     private void initView() {
-        loadMoreListView= (ListView) findViewById(R.id.load_more_small_image_list_view);
+        loadMoreListView= (LoadMoreListView) findViewById(R.id.load_more_small_image_list_view);
         ultra_ptr_frame= (PtrClassicFrameLayout) findViewById(R.id.ultra_ptr_frame);
+//        loadMoreListViewContainer= (LoadMoreListViewContainer) findViewById(R.id.load_more_list_view_container);
 
         final StoreHouseHeader header = new StoreHouseHeader(this);
         header.setPadding(0, LocalDisplay.dp2px(15), 0, 0);
@@ -80,35 +81,33 @@ public class UltraPullToRefreshActivity extends AppCompatActivity{
                 }, 2000);
             }
         });
-
-
-    }
-
-    private void loadMore() {
-        new Thread(){
+//        loadMoreListViewContainer.useDefaultFooter();
+//        loadMoreListViewContainer.setLoadMoreHandler(new LoadMoreHandler() {
+//            @Override
+//            public void onLoadMore(LoadMoreContainer loadMoreContainer) {
+//                loadMore();
+//            }
+//        });
+        loadMoreListView.setOnLoadMoreListener(new LoadMoreListView.OnLoadMoreListener() {
             @Override
-            public void run() {
-                super.run();
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                runOnUiThread(new Runnable() {
+            public void onLoadMore() {
+                loadMoreListView.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mData.addLast("加载数据");
+                        mData.add("加载数据");
+                        loadMoreListView.setLoadCompleted();
                         mAdapter.notifyDataSetChanged();
-
                     }
-                });
+                },2000);
             }
-        }.start();
+        });
+
     }
 
+
+
     private void setData() {
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 30; i++) {
             mData.add("测试数据" + i);
         }
         mAdapter = new ListAdapter(mData, this);
