@@ -24,4 +24,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile project(':library_PullToRefresh_ForZc')
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
 }
