@@ -48,7 +48,6 @@ public class MixtureActivity extends AppCompatActivity{
         ultra_ptr_frame.setPtrHandler(new PtrHandler() {
             @Override
             public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-//                Log.e("TAG","child是否可以向上滑动"+PtrDefaultHandler.canChildScrollUp(content));
                 //这里的滚动应该交给包裹的ListView去判断，不能使用content（因为它是一个PullToRefreshListView，继承LinearLayout，是无法滑动的）
                 return PtrDefaultHandler.checkContentCanBePulledDown(frame,mPullToRefreshListView.getRefreshableView(),header);
             }
