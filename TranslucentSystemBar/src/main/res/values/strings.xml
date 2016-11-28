@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">"TranslucentSystemBar "</string>
+    <string name="TranslucentSystemBar">沉浸式状态栏</string>
+    <string name="diff_style">配置不同版本的Style的方式</string>
+</resources>

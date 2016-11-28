@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/GalleryViewPager" />
+            <option value="$PROJECT_DIR$/TranslucentSystemBar" />
             <option value="$PROJECT_DIR$/library_PullToRefresh_ForZc" />
             <option value="$PROJECT_DIR$/pulltorefreshdemo" />
             <option value="$PROJECT_DIR$/videologin" />
@@ -19,6 +20,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/GalleryViewPager" />
+            <option value="$PROJECT_DIR$/TranslucentSystemBar" />
             <option value="$PROJECT_DIR$/library_PullToRefresh_ForZc" />
             <option value="$PROJECT_DIR$/pulltorefreshdemo" />
             <option value="$PROJECT_DIR$/videologin" />
