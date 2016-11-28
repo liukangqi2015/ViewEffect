@@ -4,15 +4,7 @@
         "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
     },
     {
-        "merged": "E:\\ASWorkSpace\\Mukr2.1.5\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "E:\\ASWorkSpace\\Mukr2.1.5\\library_PullToRefresh_ForZc\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
-    },
-    {
         "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
         "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
-    },
-    {
-        "merged": "E:\\ASWorkSpace\\Mukr2.1.5\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "E:\\ASWorkSpace\\Mukr2.1.5\\library_PullToRefresh_ForZc\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
     }
 ]
