@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidDrawStudy/AndroidDrawStudy.iml" filepath="$PROJECT_DIR$/AndroidDrawStudy/AndroidDrawStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/GalleryViewPager/GalleryViewPager.iml" filepath="$PROJECT_DIR$/GalleryViewPager/GalleryViewPager.iml" />
       <module fileurl="file://$PROJECT_DIR$/TranslucentSystemBar/TranslucentSystemBar.iml" filepath="$PROJECT_DIR$/TranslucentSystemBar/TranslucentSystemBar.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewEffect.iml" filepath="$PROJECT_DIR$/ViewEffect.iml" />
