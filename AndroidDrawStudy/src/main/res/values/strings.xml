@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidDrawStudy</string>
+    <string name="draw_base_graphics">绘制基本图形</string>
 </resources>
