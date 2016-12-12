@@ -3,4 +3,6 @@
     <string name="draw_base_graphics">绘制基本图形</string>
     <string name="open">打开</string>
     <string name="close">关闭</string>
+    <string name="draw_point">画点</string>
+    <string name="draw_line">画线</string>
 </resources>

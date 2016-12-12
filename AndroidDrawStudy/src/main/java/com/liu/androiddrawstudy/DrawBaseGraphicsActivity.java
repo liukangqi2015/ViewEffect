@@ -3,11 +3,14 @@ package com.liu.androiddrawstudy;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 
 /**
  * 绘制基本图形
@@ -31,14 +34,18 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
         mViewNavigation= (NavigationView) findViewById(R.id.navigation);
         mDrawerToggle=new ActionBarDrawerToggle(this, mDrawerlayout, mViewToolbar, R.string.open,
                 R.string.close);
-        mViewNavigation.setCheckedItem(R.id.draw_point);
+
         // 添加侧边菜单的点击事件
         mViewNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.draw_point:
-
+                        replaceFragment(new DrawPointFragment());
+                        break;
+                    case R.id.draw_line:
+                        break;
+                    default:
                         break;
 
                 }
@@ -46,11 +53,18 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                 return true;
             }
         });
+        mViewNavigation.setCheckedItem(R.id.draw_point);
+        mViewNavigation.getMenu().performIdentifierAction(R.id.draw_point, 0);
+
     }
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
+    }
+
+    private void replaceFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_layout,fragment).commit();
     }
 }
