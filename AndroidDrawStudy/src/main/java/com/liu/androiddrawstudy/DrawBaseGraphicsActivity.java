@@ -53,7 +53,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                 return true;
             }
         });
-        //默认选中第一项
+        //默认选中画点
         mViewNavigation.setCheckedItem(R.id.draw_point);
         mViewNavigation.getMenu().performIdentifierAction(R.id.draw_point, 0);
 
