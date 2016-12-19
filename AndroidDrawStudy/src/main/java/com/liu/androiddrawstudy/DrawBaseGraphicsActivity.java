@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.liu.androiddrawstudy.fragment.DrawLineFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 
 /**
@@ -44,6 +45,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                         replaceFragment(new DrawPointFragment());
                         break;
                     case R.id.draw_line:
+                        replaceFragment(new DrawLineFragment());
                         break;
                     default:
                         break;
@@ -54,7 +56,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
             }
         });
         //默认选中画点
-        mViewNavigation.setCheckedItem(R.id.draw_point);
+//        mViewNavigation.setCheckedItem(R.id.draw_point);
         mViewNavigation.getMenu().performIdentifierAction(R.id.draw_point, 0);
 
     }

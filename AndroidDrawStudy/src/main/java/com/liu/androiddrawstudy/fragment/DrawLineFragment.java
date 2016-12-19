@@ -10,18 +10,20 @@ import android.view.ViewGroup;
 import com.liu.androiddrawstudy.R;
 
 /**
- * 画点的Fragment
- * Created by liu on 2016/12/12.
+ * 画线的Fragment
+ * Created by 刘康祺 on 2016/12/19 0019.
  */
 
-public class DrawPointFragment extends BaseFragment {
+public class DrawLineFragment extends BaseFragment {
     @Override
     public int getLayout() {
-        return R.layout.frag_draw_point;
+        return R.layout.frag_draw_line;
     }
 
     @Override
     protected void init(View rootView) {
 
     }
+
+
 }
