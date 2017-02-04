@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
-        "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
-    },
-    {
         "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_flipy.png",
         "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_flipy.png"
+    },
+    {
+        "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\default_ptr_rotate.png",
+        "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\default_ptr_rotate.png"
     },
     {
         "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\indicator_arrow.png",

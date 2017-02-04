@@ -16,11 +16,11 @@
         "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\anim\\slide_in_from_top.xml"
     },
     {
-        "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_bottom.xml",
-        "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\anim\\slide_in_from_bottom.xml"
-    },
-    {
         "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\anim\\slide_out_to_bottom.xml",
         "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\anim\\slide_out_to_bottom.xml"
+    },
+    {
+        "merged": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\build\\intermediates\\res\\merged\\debug\\anim\\slide_in_from_bottom.xml",
+        "source": "E:\\LibStudy\\ViewEffect\\library_PullToRefresh_ForZc\\src\\main\\res\\anim\\slide_in_from_bottom.xml"
     }
 ]
