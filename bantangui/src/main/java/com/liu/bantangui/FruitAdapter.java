@@ -14,9 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-/**
- * Created by MarvelY on 2017/1/5 20:22
- */
+
 
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder>{
 

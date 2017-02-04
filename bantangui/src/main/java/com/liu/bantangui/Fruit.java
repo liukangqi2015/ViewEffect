@@ -1,8 +1,5 @@
 package com.liu.bantangui;
 
-/**
- * Created by MarvelY on 2017/1/5 20:14
- */
 
 public class Fruit {
 
