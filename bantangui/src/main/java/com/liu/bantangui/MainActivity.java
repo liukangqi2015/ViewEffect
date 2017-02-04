@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             new Fruit("cherry",R.mipmap.cherry),
             new Fruit("mango",R.mipmap.mango)
     };
+    //数据集
     private List<Fruit> fruitList = new ArrayList<>();
     private AppBarLayout appBarLayout;
     private Toolbar toolbar_default;
