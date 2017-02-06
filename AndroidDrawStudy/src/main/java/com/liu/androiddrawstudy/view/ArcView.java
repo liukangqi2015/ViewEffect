@@ -10,22 +10,25 @@ import android.view.View;
 import com.liu.androiddrawstudy.R;
 
 /**
- * 画椭圆的View
+ * 画弧形的View
  * Created by liu on 2017/2/6.
  */
 
-public class OvalView extends View {
+public class ArcView extends View {
     private Paint mPaint=new Paint();
-    private  RectF rectF = new RectF(300, 300, 600, 700);
-    public OvalView(Context context) {
+    private RectF rectF01 = new RectF(200, 300, 500, 700);
+    private RectF rectF02= new RectF(400,300,700,700);
+    private RectF rectF03=new RectF(200,700,500,1100);
+    private RectF rectF04=new RectF(400,700,700,1100);
+    public ArcView(Context context) {
         this(context,null);
     }
 
-    public OvalView(Context context, AttributeSet attrs) {
+    public ArcView(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public OvalView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ArcView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }
@@ -40,7 +43,10 @@ public class OvalView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawRect(rectF, mPaint);//画矩形
-        canvas.drawOval(rectF, mPaint);//矩形内画椭圆
+        canvas.drawArc(rectF01,0f,90f,true,mPaint);
+        canvas.drawArc(rectF02,0f,90f,false,mPaint);
+        mPaint.setStyle(Paint.Style.FILL);
+        canvas.drawArc(rectF03,0f,90f,true,mPaint);
+        canvas.drawArc(rectF04,0f,90f,false,mPaint);
     }
 }

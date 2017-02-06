@@ -13,4 +13,6 @@
         android:title="@string/draw_circle"/>
     <item android:id="@+id/draw_oval"
         android:title="@string/draw_oval"/>
+    <item android:id="@+id/draw_arc"
+        android:title="@string/draw_arc"/>
 </menu>
