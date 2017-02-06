@@ -2,7 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <item android:id="@+id/draw_point"
-        android:checked="true"
         android:title="@string/draw_point"/>
     <item android:id="@+id/draw_line"
         android:title="@string/draw_line"/>

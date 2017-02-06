@@ -1,4 +1,4 @@
-package com.liu.androiddrawstudy;
+package com.liu.androiddrawstudy.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.DrawLineFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 
@@ -22,6 +23,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     private Toolbar mViewToolbar;
     private NavigationView mViewNavigation;
     private ActionBarDrawerToggle mDrawerToggle;
+    private int positions[]=new int[]{0,1};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,10 +44,10 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.draw_point:
-                        replaceFragment(new DrawPointFragment());
+                        switchFragment(0,new DrawPointFragment());
                         break;
                     case R.id.draw_line:
-                        replaceFragment(new DrawLineFragment());
+                        switchFragment(1,new DrawLineFragment());
                         break;
                     default:
                         break;
@@ -56,10 +58,24 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
             }
         });
         //默认选中画点
-//        mViewNavigation.setCheckedItem(R.id.draw_point);
-        mViewNavigation.getMenu().performIdentifierAction(R.id.draw_point, 0);
+//        mViewNavigation.getMenu().performIdentifierAction(R.id.draw_point, 0);
+        switchFragment(0,new DrawPointFragment());
 
     }
+
+    private void switchFragment(int position,Fragment fragment){
+        for (int i = 0; i <positions.length ; i++) {
+            if (position==positions[i]){
+                mViewNavigation.getMenu().getItem(positions[i]).setChecked(true);
+            }else {
+                mViewNavigation.getMenu().getItem(positions[i]).setChecked(false);
+            }
+        }
+
+        replaceFragment(fragment);
+    }
+
+
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
