@@ -14,6 +14,7 @@ import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.DrawLineFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 import com.liu.androiddrawstudy.fragment.DrawRectFragment;
+import com.liu.androiddrawstudy.fragment.DrawRoundRectFragment;
 
 /**
  * 绘制基本图形
@@ -24,7 +25,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     private Toolbar mViewToolbar;
     private NavigationView mViewNavigation;
     private ActionBarDrawerToggle mDrawerToggle;
-    private int positions[]=new int[]{0,1,2};
+    private int positions[]=new int[]{0,1,2,3};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,9 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                         break;
                     case R.id.draw_rect:
                         switchFragment(2,new DrawRectFragment());
+                        break;
+                    case R.id.draw_round_rect:
+                        switchFragment(3,new DrawRoundRectFragment());
                         break;
                     default:
                         break;

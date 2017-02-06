@@ -6,4 +6,5 @@
     <string name="draw_point">画点</string>
     <string name="draw_line">画线</string>
     <string name="draw_rect">画矩形</string>
+    <string name="draw_round_rect">画圆角矩形</string>
 </resources>
