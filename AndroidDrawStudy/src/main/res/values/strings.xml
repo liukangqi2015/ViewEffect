@@ -8,4 +8,5 @@
     <string name="draw_rect">绘制矩形</string>
     <string name="draw_round_rect">绘制圆角矩形</string>
     <string name="draw_circle">绘制圆形</string>
+    <string name="draw_oval">绘制椭圆</string>
 </resources>

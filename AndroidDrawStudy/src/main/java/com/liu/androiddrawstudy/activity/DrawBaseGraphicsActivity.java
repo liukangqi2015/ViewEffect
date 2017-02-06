@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.DrawCircleFragment;
 import com.liu.androiddrawstudy.fragment.DrawLineFragment;
+import com.liu.androiddrawstudy.fragment.DrawOvalFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 import com.liu.androiddrawstudy.fragment.DrawRectFragment;
 import com.liu.androiddrawstudy.fragment.DrawRoundRectFragment;
@@ -26,8 +27,8 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     private Toolbar mViewToolbar;
     private NavigationView mViewNavigation;
     private ActionBarDrawerToggle mDrawerToggle;
-    private int positions[]=new int[]{0,1,2,3,4};
-    private int titles[]=new int[]{R.string.draw_point,R.string.draw_line,R.string.draw_rect,R.string.draw_round_rect,R.string.draw_circle};
+    private int positions[]=new int[]{0,1,2,3,4,5};
+    private int titles[]=new int[]{R.string.draw_point,R.string.draw_line,R.string.draw_rect,R.string.draw_round_rect,R.string.draw_circle,R.string.draw_oval};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +63,8 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                     case R.id.draw_circle:
                         switchFragment(4,new DrawCircleFragment());
                         break;
+                    case R.id.draw_oval:
+                        switchFragment(5,new DrawOvalFragment());
                     default:
                         break;
 

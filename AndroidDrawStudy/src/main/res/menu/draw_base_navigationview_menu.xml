@@ -11,4 +11,6 @@
         android:title="@string/draw_round_rect"/>
     <item android:id="@+id/draw_circle"
         android:title="@string/draw_circle"/>
+    <item android:id="@+id/draw_oval"
+        android:title="@string/draw_oval"/>
 </menu>

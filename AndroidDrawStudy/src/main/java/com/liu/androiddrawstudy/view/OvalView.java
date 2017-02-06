@@ -3,29 +3,29 @@ package com.liu.androiddrawstudy.view;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.liu.androiddrawstudy.R;
 
 /**
- * 画圆形的View
+ * 画椭圆的View
  * Created by liu on 2017/2/6.
  */
 
-public class CircleView extends View {
+public class OvalView extends View {
     private Paint mPaint=new Paint();
-    //圆的半径
-    private float radius=100f;
-    public CircleView(Context context) {
+    private  RectF rectF = new RectF(300, 300, 600, 700);
+    public OvalView(Context context) {
         this(context,null);
     }
 
-    public CircleView(Context context, AttributeSet attrs) {
+    public OvalView(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public CircleView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public OvalView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }
@@ -40,8 +40,8 @@ public class CircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawCircle(400f,400f,radius,mPaint);
-        mPaint.setStyle(Paint.Style.FILL);
-        canvas.drawCircle(400f,800f,radius,mPaint);
+
+        canvas.drawRect(rectF, mPaint);//画矩形
+        canvas.drawOval(rectF, mPaint);//矩形内画椭圆
     }
 }
