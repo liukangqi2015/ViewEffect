@@ -5,5 +5,7 @@
         android:title="@string/draw_point"/>
     <item android:id="@+id/draw_line"
         android:title="@string/draw_line"/>
+    <item android:id="@+id/draw_rect"
+        android:title="@string/draw_rect"/>
 
 </menu>

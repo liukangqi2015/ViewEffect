@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.DrawLineFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
+import com.liu.androiddrawstudy.fragment.DrawRectFragment;
 
 /**
  * 绘制基本图形
@@ -23,7 +24,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     private Toolbar mViewToolbar;
     private NavigationView mViewNavigation;
     private ActionBarDrawerToggle mDrawerToggle;
-    private int positions[]=new int[]{0,1};
+    private int positions[]=new int[]{0,1,2};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,9 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                         break;
                     case R.id.draw_line:
                         switchFragment(1,new DrawLineFragment());
+                        break;
+                    case R.id.draw_rect:
+                        switchFragment(2,new DrawRectFragment());
                         break;
                     default:
                         break;
