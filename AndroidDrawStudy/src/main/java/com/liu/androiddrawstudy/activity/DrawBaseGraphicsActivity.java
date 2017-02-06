@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.liu.androiddrawstudy.R;
+import com.liu.androiddrawstudy.fragment.DrawCircleFragment;
 import com.liu.androiddrawstudy.fragment.DrawLineFragment;
 import com.liu.androiddrawstudy.fragment.DrawPointFragment;
 import com.liu.androiddrawstudy.fragment.DrawRectFragment;
@@ -25,7 +26,8 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     private Toolbar mViewToolbar;
     private NavigationView mViewNavigation;
     private ActionBarDrawerToggle mDrawerToggle;
-    private int positions[]=new int[]{0,1,2,3};
+    private int positions[]=new int[]{0,1,2,3,4};
+    private int titles[]=new int[]{R.string.draw_point,R.string.draw_line,R.string.draw_rect,R.string.draw_round_rect,R.string.draw_circle};
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,9 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                     case R.id.draw_round_rect:
                         switchFragment(3,new DrawRoundRectFragment());
                         break;
+                    case R.id.draw_circle:
+                        switchFragment(4,new DrawCircleFragment());
+                        break;
                     default:
                         break;
 
@@ -72,6 +77,7 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
     }
 
     private void switchFragment(int position,Fragment fragment){
+        mViewToolbar.setTitle(titles[position]);
         for (int i = 0; i <positions.length ; i++) {
             if (position==positions[i]){
                 mViewNavigation.getMenu().getItem(positions[i]).setChecked(true);
@@ -79,7 +85,6 @@ public class DrawBaseGraphicsActivity extends AppCompatActivity{
                 mViewNavigation.getMenu().getItem(positions[i]).setChecked(false);
             }
         }
-
         replaceFragment(fragment);
     }
 

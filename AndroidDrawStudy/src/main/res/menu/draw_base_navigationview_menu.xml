@@ -9,4 +9,6 @@
         android:title="@string/draw_rect"/>
     <item android:id="@+id/draw_round_rect"
         android:title="@string/draw_round_rect"/>
+    <item android:id="@+id/draw_circle"
+        android:title="@string/draw_circle"/>
 </menu>

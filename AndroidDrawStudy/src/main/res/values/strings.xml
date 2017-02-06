@@ -3,8 +3,9 @@
     <string name="draw_base_graphics">绘制基本图形</string>
     <string name="open">打开</string>
     <string name="close">关闭</string>
-    <string name="draw_point">画点</string>
-    <string name="draw_line">画线</string>
-    <string name="draw_rect">画矩形</string>
-    <string name="draw_round_rect">画圆角矩形</string>
+    <string name="draw_point">绘制点</string>
+    <string name="draw_line">绘制直线</string>
+    <string name="draw_rect">绘制矩形</string>
+    <string name="draw_round_rect">绘制圆角矩形</string>
+    <string name="draw_circle">绘制圆形</string>
 </resources>
