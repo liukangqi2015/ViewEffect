@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.liu.androiddrawstudy.R;
+import com.liu.androiddrawstudy.fragment.CanvasTranslateFragment;
 import com.liu.androiddrawstudy.fragment.SimpleCardFragment;
 
 import java.util.ArrayList;
@@ -41,10 +42,9 @@ public class CanvasOperationActivity extends AppCompatActivity{
     }
 
     private void initData() {
-        for (int i = 0; i <mTitles.length ; i++) {
-            SimpleCardFragment simpleCardFrag=SimpleCardFragment.getInstance(mTitles[i]);
-            mFragments.add(simpleCardFrag);
-        }
+        mFragments.add(new CanvasTranslateFragment());
+        mFragments.add(SimpleCardFragment.getInstance(mTitles[1]));
+        mFragments.add(SimpleCardFragment.getInstance(mTitles[2]));
         MyPagerAdapter adapter=new MyPagerAdapter(getSupportFragmentManager());
         view_pager.setAdapter(adapter);
         tab_layout.setupWithViewPager(view_pager);
