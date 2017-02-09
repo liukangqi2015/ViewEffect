@@ -10,26 +10,26 @@ import android.view.View;
 import com.liu.androiddrawstudy.R;
 
 /**
- * 演示Canvas缩放的View
- * Created by liu on 2017/2/7.
+ * 演示Canvas旋转的View
+ * Created by liu on 2017/2/9.
  */
 
-public class CanvasScaleView extends View {
+public class CanvasRotateView extends View {
     private Paint mPaint=new Paint();
     private Paint translatePaint=new Paint();
     // 宽高
     private int mWidth, mHeight;
     private RectF rectF=new RectF(0,-200f,200f,0);
 
-    public CanvasScaleView(Context context) {
+    public CanvasRotateView(Context context) {
         this(context,null);
     }
 
-    public CanvasScaleView(Context context, AttributeSet attrs) {
+    public CanvasRotateView(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public CanvasScaleView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CanvasRotateView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }
@@ -55,13 +55,12 @@ public class CanvasScaleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.translate(mWidth / 2, mHeight / 2);// 将坐标系原点移动到画布正中心
+        // 将坐标系原点移动到画布正中心
+        canvas.translate(mWidth / 2, mHeight / 2);
         canvas.drawRect(rectF,mPaint);
-        canvas.scale(2f,2f);// 扩大为两倍
+        canvas.rotate(180);//以原点为旋转中心，旋转180度
         canvas.drawRect(rectF,translatePaint);
-        canvas.scale(-1f,-1f);//缩放倍数不变，但是x与y方向变为相反（关于原点对称）
+        canvas.rotate(180,0,200);               // 旋转180度 <-- 旋转中心向上偏移200个单位
         canvas.drawRect(rectF,translatePaint);
-        canvas.scale(0.5f,0.5f,200f,0);//缩放中心变为（200,0），x与y方向变为0.5倍
-        canvas.drawRect(rectF,mPaint);
     }
 }
