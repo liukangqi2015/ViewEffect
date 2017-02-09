@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.CanvasRotateFragment;
 import com.liu.androiddrawstudy.fragment.CanvasScaleFragment;
+import com.liu.androiddrawstudy.fragment.CanvasSkewFragment;
 import com.liu.androiddrawstudy.fragment.CanvasTranslateFragment;
 
 import java.util.ArrayList;
@@ -21,11 +22,11 @@ import java.util.ArrayList;
  * Created by liu on 2017/2/7.
  */
 
-public class CanvasOperationActivity extends AppCompatActivity{
+public class CanvasOperationActivity extends AppCompatActivity {
     private TabLayout tab_layout;
     private ViewPager view_pager;
 
-    private String[] mTitles = {"位移", "缩放", "旋转"};
+    private String[] mTitles = {"位移", "缩放", "旋转", "错切"};
     private ArrayList<Fragment> mFragments = new ArrayList<>();
 
 
@@ -38,15 +39,16 @@ public class CanvasOperationActivity extends AppCompatActivity{
     }
 
     private void initView() {
-        tab_layout= (TabLayout) findViewById(R.id.tab_layout);
-        view_pager= (ViewPager) findViewById(R.id.vp);
+        tab_layout = (TabLayout) findViewById(R.id.tab_layout);
+        view_pager = (ViewPager) findViewById(R.id.vp);
     }
 
     private void initData() {
         mFragments.add(new CanvasTranslateFragment());
         mFragments.add(new CanvasScaleFragment());
         mFragments.add(new CanvasRotateFragment());
-        MyPagerAdapter adapter=new MyPagerAdapter(getSupportFragmentManager());
+        mFragments.add(new CanvasSkewFragment());
+        MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
         view_pager.setAdapter(adapter);
         tab_layout.setupWithViewPager(view_pager);
     }
