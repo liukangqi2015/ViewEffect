@@ -34,7 +34,7 @@ public class CanvasTranslateView extends View {
     private void initPaint() {
         mPaint.setAntiAlias(true);//抗锯齿
         mPaint.setColor(getResources().getColor(R.color.colorPrimary));
-        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);//画笔风格为描边
+        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);//画笔风格为描边和填充
         mPaint.setStrokeWidth(12f);//设置画笔宽度为12px
         translatePaint.setAntiAlias(true);
         translatePaint.setColor(getResources().getColor(R.color.colorAccent));
