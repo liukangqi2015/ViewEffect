@@ -18,6 +18,8 @@
         <activity android:name=".activity.DrawBaseGraphicsActivity"
             android:theme="@style/DrawLayoutTheme"/>
         <activity android:name=".activity.CanvasOperationActivity"/>
+        <activity android:name=".activity.PathActivity"
+            android:theme="@style/DrawLayoutTheme"/>
     </application>
 
 </manifest>

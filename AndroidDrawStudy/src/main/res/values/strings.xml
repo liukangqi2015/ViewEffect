@@ -11,4 +11,5 @@
     <string name="draw_oval">绘制椭圆</string>
     <string name="draw_arc">绘制弧形</string>
     <string name="canvas_operation">画布操作</string>
+    <string name="basic_operation_path">Path基本操作</string>
 </resources>

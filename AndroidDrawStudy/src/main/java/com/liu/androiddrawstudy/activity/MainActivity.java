@@ -9,7 +9,7 @@ import android.widget.Button;
 import com.liu.androiddrawstudy.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button draw_base_graphics_btn,canvas_operation_btn;
+    private Button draw_base_graphics_btn,canvas_operation_btn,canvas_path_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         draw_base_graphics_btn= (Button) findViewById(R.id.draw_base_graphics_btn);
         canvas_operation_btn= (Button) findViewById(R.id.canvas_operation_btn);
+        canvas_path_btn= (Button) findViewById(R.id.canvas_path_btn);
     }
 
     private void setListener() {
         draw_base_graphics_btn.setOnClickListener(this);
         canvas_operation_btn.setOnClickListener(this);
+        canvas_path_btn.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.canvas_operation_btn:
                 startActivity(new Intent(MainActivity.this,CanvasOperationActivity.class));
+                break;
+            case R.id.canvas_path_btn:
+                startActivity(new Intent(MainActivity.this,PathActivity.class));
                 break;
             default:
                 break;

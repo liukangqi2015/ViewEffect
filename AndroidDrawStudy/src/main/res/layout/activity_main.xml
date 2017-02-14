@@ -20,4 +20,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/canvas_operation"/>
+    <Button
+        android:id="@+id/canvas_path_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/basic_operation_path"/>
 </LinearLayout>
