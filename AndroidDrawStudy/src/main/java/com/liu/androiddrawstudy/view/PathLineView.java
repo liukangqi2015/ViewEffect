@@ -10,6 +10,7 @@ import android.view.View;
 import com.liu.androiddrawstudy.R;
 
 /**
+ * 演示Path基本操作，添加直线的操作
  * 演示方法：
  * public void lineTo (float x, float y)
  * public void moveTo (float x, float y)
@@ -18,21 +19,21 @@ import com.liu.androiddrawstudy.R;
  * Created by liu on 2017/2/14.
  */
 
-public class PathView01 extends View {
+public class PathLineView extends View {
     private Paint mPaint = new Paint();
     private Path path = new Path();
     // 宽高
     private int mWidth, mHeight;
 
-    public PathView01(Context context) {
+    public PathLineView(Context context) {
         this(context, null);
     }
 
-    public PathView01(Context context, AttributeSet attrs) {
+    public PathLineView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public PathView01(Context context, AttributeSet attrs, int defStyleAttr) {
+    public PathLineView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initPaint();
     }

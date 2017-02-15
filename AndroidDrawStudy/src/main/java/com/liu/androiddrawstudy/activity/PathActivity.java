@@ -13,7 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.liu.androiddrawstudy.R;
-import com.liu.androiddrawstudy.fragment.PathView01Fragment;
+import com.liu.androiddrawstudy.fragment.PathBasicGraphicsFragment;
+import com.liu.androiddrawstudy.fragment.PathLineViewFragment;
 
 /**
  * 演示Path的基本操作的Activity
@@ -25,7 +26,7 @@ public class PathActivity extends AppCompatActivity {
     private Toolbar mViewToolbar;
     private ListView left_drawer_list;
     private ActionBarDrawerToggle mDrawerToggle;
-    private String[] titles = {"第1组: moveTo、 setLastPoint、 lineTo 和 close", "List Item 02", "List Item 03", "List Item 04"};
+    private String[] titles = {"Path-直线", "Path-基本图形", "List Item 03", "List Item 04"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,7 +62,10 @@ public class PathActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        switchFragment(0,new PathView01Fragment());
+                        switchFragment(0,new PathLineViewFragment());
+                        break;
+                    case 1:
+                        switchFragment(0,new PathBasicGraphicsFragment());
                         break;
                     default:
                         break;
@@ -76,7 +80,7 @@ public class PathActivity extends AppCompatActivity {
         //设置菜单列表
         ArrayAdapter arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, titles);
         left_drawer_list.setAdapter(arrayAdapter);
-        switchFragment(0,new PathView01Fragment());
+        switchFragment(0,new PathLineViewFragment());
     }
 
     private void switchFragment(int position,Fragment fragment){

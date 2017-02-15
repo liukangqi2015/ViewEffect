@@ -6,13 +6,13 @@ import com.liu.androiddrawstudy.R;
 
 /**
  *
- * Created by liu on 2017/2/14.
+ * Created by liu on 2017/2/15.
  */
 
-public class PathView01Fragment extends BaseFragment {
+public class PathBasicGraphicsFragment extends BaseFragment {
     @Override
     public int getLayout() {
-        return R.layout.frag_path_view01;
+        return R.layout.frag_path_basic_graphics;
     }
 
     @Override
