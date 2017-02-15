@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.liu.androiddrawstudy.R;
+import com.liu.androiddrawstudy.fragment.BezierViewFragment;
 import com.liu.androiddrawstudy.fragment.PathBasicGraphicsFragment;
 import com.liu.androiddrawstudy.fragment.PathLineViewFragment;
 
@@ -26,7 +27,7 @@ public class PathActivity extends AppCompatActivity {
     private Toolbar mViewToolbar;
     private ListView left_drawer_list;
     private ActionBarDrawerToggle mDrawerToggle;
-    private String[] titles = {"Path-直线", "Path-基本图形", "List Item 03", "List Item 04"};
+    private String[] titles = {"Path-直线", "Path-基本图形", "Path-贝塞尔曲线", "List Item 04"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,7 +66,10 @@ public class PathActivity extends AppCompatActivity {
                         switchFragment(0,new PathLineViewFragment());
                         break;
                     case 1:
-                        switchFragment(0,new PathBasicGraphicsFragment());
+                        switchFragment(1,new PathBasicGraphicsFragment());
+                        break;
+                    case 2:
+                        switchFragment(2,new BezierViewFragment());
                         break;
                     default:
                         break;
