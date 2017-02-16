@@ -15,4 +15,6 @@
         android:title="@string/draw_oval"/>
     <item android:id="@+id/draw_arc"
         android:title="@string/draw_arc"/>
+    <item android:id="@+id/draw_text"
+        android:title="@string/draw_text"/>
 </menu>
