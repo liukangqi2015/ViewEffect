@@ -27,7 +27,7 @@ public class PathActivity extends AppCompatActivity {
     private Toolbar mViewToolbar;
     private ListView left_drawer_list;
     private ActionBarDrawerToggle mDrawerToggle;
-    private String[] titles = {"Path-直线", "Path-基本图形", "Path-贝塞尔曲线", "List Item 04"};
+    private String[] titles = {"Path-直线", "Path-基本图形", "Path-贝塞尔曲线"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

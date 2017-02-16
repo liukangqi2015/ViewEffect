@@ -89,12 +89,13 @@ public class BezierView extends View {
         mPaint.setStrokeWidth(5f);
         canvas.drawLine(start.x,start.y,control.x,control.y,mPaint);
         canvas.drawLine(end.x,end.y,control.x,control.y,mPaint);
-        //绘制贝塞尔曲线
+
         mPaint.setStrokeWidth(10f);
         mPaint.setColor(getResources().getColor(R.color.colorAccent));
-        //绘制贝塞尔曲线
+        //重置路径
         path.reset();
         path.moveTo(start.x,start.y);
+        //绘制贝塞尔曲线
         path.quadTo(control.x,control.y,end.x,end.y);
         canvas.drawPath(path,mPaint);
     }
