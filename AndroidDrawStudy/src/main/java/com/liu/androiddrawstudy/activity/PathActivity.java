@@ -16,6 +16,7 @@ import com.liu.androiddrawstudy.R;
 import com.liu.androiddrawstudy.fragment.BezierViewFragment;
 import com.liu.androiddrawstudy.fragment.PathBasicGraphicsFragment;
 import com.liu.androiddrawstudy.fragment.PathLineViewFragment;
+import com.liu.androiddrawstudy.fragment.TouchPathViewFragment;
 
 /**
  * 演示Path的基本操作的Activity
@@ -27,7 +28,7 @@ public class PathActivity extends AppCompatActivity {
     private Toolbar mViewToolbar;
     private ListView left_drawer_list;
     private ActionBarDrawerToggle mDrawerToggle;
-    private String[] titles = {"Path-直线", "Path-基本图形", "Path-贝塞尔曲线"};
+    private String[] titles = {"Path-直线", "Path-基本图形", "Path-贝塞尔曲线","Path-绘制手势轨迹的View"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,6 +72,8 @@ public class PathActivity extends AppCompatActivity {
                     case 2:
                         switchFragment(2,new BezierViewFragment());
                         break;
+                    case 3:
+                        switchFragment(3,new TouchPathViewFragment());
                     default:
                         break;
                 }
