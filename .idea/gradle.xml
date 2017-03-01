@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AndroidDrawStudy" />
+            <option value="$PROJECT_DIR$/CircleProgress" />
             <option value="$PROJECT_DIR$/GalleryViewPager" />
             <option value="$PROJECT_DIR$/TranslucentSystemBar" />
             <option value="$PROJECT_DIR$/bantangui" />
